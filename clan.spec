@@ -1,8 +1,8 @@
 Summary:	Clan - a Polyhedral Representation Extraction Tool for C-Based High Level Languages
-Summary(pl.UTF-8):	Clan - narzędzie do tworzenia reprezentacji wielościennej dla języków opartych na C
+Summary(pl.UTF-8):	Clan - narzędzie do tworzenia reprezentacji wielościanowej dla języków opartych na C
 Name:		clan
 Version:	0.8.0
-Release:	1
+Release:	2
 License:	LGPL v3+
 Group:		Libraries
 #Source0Download: http://icps.u-strasbg.fr/people/bastoul/public_html/development/clan/
@@ -34,9 +34,16 @@ LeTSeE, Clan etc.). Using Clan, the user has to deal with source
 codes based on C grammar only (as C, C++, C# or Java).
 
 %description -l pl.UTF-8
-Clan (Chunky ANalyzer for Dependences in Loops - blokowy analizator
-zależności w pętlach) to wolnodostępne oprogramowanie i biblioteka
-służące do obliczeń zależności danych.
+Clan to wolnodostępne oprogramowanie i biblioteka tłumacząca wybrane
+części programów napisanych w językach wysokiego poziomu, takich jak
+C, C++, C# lub Java na reprezentację wielościanową o nazwie OpenScop.
+Reprezentacja ta może być przetwarzana przez inne narzędzia w celu np.
+złożonych analiz lub restrukturyzacji programu (optymalizacji,
+zrównoleglenia i innych). Powstało, aby zapobiec nudnemu i
+błędogennemu tworzeniu plików wejściowych dla narzędzi wielościanowych
+(takich jak CLooG, LeTSeE, Clan itp.). Przy użyciu narzędzia Clan
+można obsłużyć tylko kody źródłowe oparte na gramatyce C (takie jak C,
+C++, C# lub Java).
 
 %package devel
 Summary:	Header files for Clan library
