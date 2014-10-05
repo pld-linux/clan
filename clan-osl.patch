@@ -1,0 +1,11 @@
+--- clan-0.8.0/configure.ac.orig	2014-06-03 17:55:27.000000000 +0200
++++ clan-0.8.0/configure.ac	2014-10-05 15:06:02.102561268 +0200
+@@ -204,7 +204,7 @@
+ 	if test "x$with_osl_exec_prefix" != "x"; then
+ 		OSL_LDFLAGS="-L$with_osl_exec_prefix/lib"
+ 	fi
+-	OSL_LIBS="$with_osl_exec_prefix/lib/libosl.la -losl"
++	OSL_LIBS="-losl"
+ esac
+ AM_CONDITIONAL(BUNDLED_OSL, test $with_osl = bundled)
+ 

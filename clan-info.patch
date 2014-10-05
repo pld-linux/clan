@@ -1,0 +1,30 @@
+--- clan-0.8.0/doc/Makefile.am.orig	2014-10-05 15:00:13.715909221 +0200
++++ clan-0.8.0/doc/Makefile.am	2014-10-05 15:00:20.782575591 +0200
+@@ -65,10 +65,11 @@
+ 	clan.texi				\
+ 	clan.pdf
+ 
++info_TEXINFOS =
++AM_MAKEINFOHTMLFLAGS    = --no-headers --no-split
+ if GENERATE_DOC
+ # Unfortunately the following is not supported conditionaly
+-#info_TEXINFOS		= clan.texi
+-#AM_MAKEINFOHTMLFLAGS    = --no-headers --no-split
++info_TEXINFOS		+= clan.texi
+ 
+ clan.pdf: clan.texi
+ 	$(TEXI2PDF) clan.texi
+--- clan-0.8.0/doc/clan.texi.orig	2014-06-03 17:55:58.000000000 +0200
++++ clan-0.8.0/doc/clan.texi	2014-10-05 14:52:41.125928208 +0200
+@@ -33,6 +33,11 @@
+      @afourpaper
+ @end iftex
+ 
++@dircategory Programming tools:
++@direntry
++* Clan: (clan).				A Polyhedral Representation Extraction Tool for C-Based High Level Langauges
++@end direntry
++
+ @c %**end of header
+ 
+ @c % /*************************************************************************
