@@ -1,15 +1,16 @@
 Summary:	Clan - a Polyhedral Representation Extraction Tool for C-Based High Level Languages
 Summary(pl.UTF-8):	Clan - narzędzie do tworzenia reprezentacji wielościanowej dla języków opartych na C
 Name:		clan
-Version:	0.8.0
-Release:	3
+Version:	0.8.1
+Release:	1
 License:	LGPL v3+
 Group:		Libraries
-#Source0Download: http://icps.u-strasbg.fr/people/bastoul/public_html/development/clan/
-Source0:	http://icps.u-strasbg.fr/people/bastoul/public_html/development/clan/docs/%{name}-%{version}.tar.gz
-# Source0-md5:	0dcba7f4bdf32159405f27ebce439d63
+##Source0Download: http://icps.u-strasbg.fr/people/bastoul/public_html/development/clan/
+#Source0:	http://icps.u-strasbg.fr/people/bastoul/public_html/development/clan/docs/%{name}-%{version}.tar.gz
+#Source0Download: https://github.com/periscop/clan/releases
+Source0:	https://github.com/periscop/clan/releases/download/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	bffd26cc8b1360e47245ef71cea78aa3
 Patch0:		%{name}-info.patch
-Patch1:		%{name}-osl.patch
 URL:		http://icps.u-strasbg.fr/people/bastoul/public_html/development/clan/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
@@ -73,7 +74,6 @@ Statyczna biblioteka Clan.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 %{__libtoolize}
@@ -115,6 +115,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libclan.so
 %{_libdir}/libclan.la
+%dir %{_libdir}/clan
+%{_libdir}/clan/clan-config.cmake
 %{_includedir}/clan
 %{_infodir}/clan.info*
 
