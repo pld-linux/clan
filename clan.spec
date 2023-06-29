@@ -2,7 +2,7 @@ Summary:	Clan - a Polyhedral Representation Extraction Tool for C-Based High Lev
 Summary(pl.UTF-8):	Clan - narzędzie do tworzenia reprezentacji wielościanowej dla języków opartych na C
 Name:		clan
 Version:	0.8.1
-Release:	1
+Release:	2
 License:	LGPL v3+
 Group:		Libraries
 ##Source0Download: http://icps.u-strasbg.fr/people/bastoul/public_html/development/clan/
